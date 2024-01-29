@@ -1,0 +1,19 @@
+{
+  "name": "shops",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start-api": "cd api && npm start",
+    "start-react": "cd client && npm run dev",
+    "prestart": "npm run install-dep",
+    "start": "concurrently \"npm run start-api\" \"npm run start-react\"",
+    "install-dep": "npm install && cd api && npm install && cd ../client && npm install"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
